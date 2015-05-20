@@ -2,7 +2,6 @@
 /*Normalize html, body and container*/
     html,body {
       height: 100%;
-      background-color: lightgrey;
     }
 
     body {
@@ -15,24 +14,40 @@
 /*Masthead Styling*/
 /*////////////////*/
 
-    .masthead {
-        margin-bottom: 30px;
+    .container-fluid > .row > .masthead {
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    .masthead-title {
+      color: black;
+    }
+
+    .masthead-nav{
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      color: white;
+      padding: 10px;
     }
 
     .masthead-nav > li {
-        display: inline-block;
+      display: inline-block;
+    }
+
+    .masthead-nav > li > a{
+      color: black;
     }
 
     /*Masthead hover and active effects*/
     .masthead-nav > li > a:hover,
     .masthead-nav > li > a:focus {
       background-color: transparent;
-      border-bottom: 2px solid #275d8b;
+      border-bottom: 2px solid black;
     }
     .masthead-nav > .active > a,
     .masthead-nav > .active > a:hover,
     .masthead-nav > .active > a:focus {
-      border-bottom: 2px solid #337ab7;
+      border-bottom: 2px solid black;
     }
 
 /*////////////////*/
@@ -49,5 +64,15 @@
     }
 
     .carousel-inner > .item > img {
-        margin: 10px;
+        margin: 10px auto;
+        width: 100%;
+        height: 400px;
+    }
+
+    .carousel-caption {
+      background-color: lightgrey;
+      border: 2px solid black;
+      color: black;
+      border-radius: 10px;
+      opacity: 0.8;
     }
