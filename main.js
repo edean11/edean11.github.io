@@ -1,5 +1,5 @@
-;(function(){
-  'use strict'
+// ;(function(){
+//   'use strict'
 
-  alert('Welcome');
-}())
+//   alert('Welcome');
+// }())
