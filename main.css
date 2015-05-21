@@ -29,7 +29,7 @@
       margin-bottom: 140px;
     }
 
-    .carousel-inner > .item > img {
+    .carousel-inner > .item > a > img {
         margin: 0 auto;
         height: 500px;
         width: 100%;
@@ -67,7 +67,7 @@
 
     .about-container {
       padding-top: 40px;
-      padding-bottom: 180px;
+      padding-bottom: 140px;
       background-color: black;
       color: white;
     }
@@ -98,15 +98,15 @@
 /*/////////////*/
 
 .icon-links {
+  padding: 70px 0;
+}
+
+.icon-links a {
   color: darkgrey;
-  margin: 60px;
+  margin: 30px;
 }
 
-.icon-links > i {
-  margin-right: 25px;
-}
-
-.icon-links > i:hover {
+.icon-links > a:hover {
   color: black;
 }
 
