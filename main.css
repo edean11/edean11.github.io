@@ -2,71 +2,37 @@
 /*Normalize html, body and container*/
     html,body {
       height: 100%;
-    }
-
-    body {
-      color: #fff;
-      text-align: center;
-      text-shadow: 0 1px 3px rgba(0,0,0,.8);
-    }
-
-/*////////////////*/
-/*Masthead Styling*/
-/*////////////////*/
-
-    .container-fluid > .row > .masthead {
-      margin-bottom: 30px;
       padding: 0;
     }
 
-    .masthead-title {
-      color: black;
+    #margin-fix {
+      padding: 0;
     }
 
-    .masthead-nav{
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-      color: white;
-      padding: 10px;
+    body {
+      text-align: center;
+      font-family: 'Philosopher', sans-serif;
+      font-size: 1.7em;
     }
 
-    .masthead-nav > li {
-      display: inline-block;
-    }
-
-    .masthead-nav > li > a{
-      color: black;
-    }
-
-    /*Masthead hover and active effects*/
-    .masthead-nav > li > a:hover,
-    .masthead-nav > li > a:focus {
-      background-color: transparent;
-      border-bottom: 2px solid black;
-    }
-    .masthead-nav > .active > a,
-    .masthead-nav > .active > a:hover,
-    .masthead-nav > .active > a:focus {
-      border-bottom: 2px solid black;
+    h2 {
+      font-size: 2.4em;
+      margin-bottom: 50px;
     }
 
 /*////////////////*/
 /*Carousel Styling*/
 /*////////////////*/
 
-    .carousel-container {
-        background-color: papayawhip;
-        padding: 20px;
-    }
-
-    .carousel-container > .carousel-control {
-        background-image: none;
+    #carousel-container {
+      padding: 0;
+      margin-bottom: 140px;
     }
 
     .carousel-inner > .item > img {
-        margin: 10px auto;
+        margin: 0 auto;
+        height: 500px;
         width: 100%;
-        height: 400px;
     }
 
     .carousel-caption {
@@ -75,4 +41,75 @@
       color: black;
       border-radius: 10px;
       opacity: 0.8;
+      padding: 20px;
     }
+
+/*/////////////*/
+/*About Styling*/
+/*/////////////*/
+
+    .profile-container {
+      margin: 60px 0;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 2.3em;
+      text-align: center;
+      color: white;
+      background-color: black;
+    }
+
+    .profile-pic > img {
+      width: 230px;
+    }
+
+    .profile-caption {
+      margin-top: 40px;
+    }
+
+    .about-container {
+      padding-top: 40px;
+      padding-bottom: 180px;
+      background-color: black;
+      color: white;
+    }
+
+    .about-container i {
+      padding-top: 15%;
+    }
+
+    .about-row {
+      margin-bottom: 50px;
+    }
+
+    .background-container,.skills-container,.interests-container {
+/*      font-size: 1.3em;*/
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    li {
+      list-style: none;
+      text-align: left;
+    }
+
+/*/////////////*/
+/*Icon Styling*/
+/*/////////////*/
+
+.icon-links {
+  color: darkgrey;
+  margin: 60px;
+}
+
+.icon-links > i {
+  margin-right: 25px;
+}
+
+.icon-links > i:hover {
+  color: black;
+}
+
+
+
+
