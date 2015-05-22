@@ -97,18 +97,18 @@
 /*Icon Styling*/
 /*/////////////*/
 
-.icon-links {
-  padding: 70px 0;
-}
+  .icon-links {
+    padding: 70px 0;
+  }
 
-.icon-links a {
-  color: darkgrey;
-  margin: 40px;
-}
+  .icon-links a {
+    color: darkgrey;
+    margin: 40px;
+  }
 
-.icon-links > a:hover {
-  color: black;
-}
+  .icon-links > a:hover {
+    color: black;
+  }
 
 
 
