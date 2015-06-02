@@ -5,7 +5,7 @@
       padding: 0;
     }
 
-    #margin-fix {
+    #padding-fix {
       padding: 0;
     }
 
@@ -84,6 +84,15 @@
       padding: 0 30px;
     }
 
+    .skills-list li{
+      display: inline-block;
+      padding: 10px;
+    }
+
+    .skills-list li img {
+      height: 70px;
+    }
+
     h4 {
       font-weight: bold;
       font-size: 2em;
@@ -119,6 +128,12 @@
 /*Media Queries*/
 /*/////////////*/
 
+@media (max-width: 980px) {
+  .skills-list li img {
+    height: 50px;
+  }
+}
+
 @media (max-width: 767px) {
   .about-container .about-row .background-list,
   .about-container .about-row .skills-list,
@@ -129,6 +144,10 @@
   .about-container .about-row .skills-list li,
   .about-container .about-row .interests-list li{
     text-align: center;
+  }
+
+  .skills-list li img {
+    height: 70px;
   }
 }
 
