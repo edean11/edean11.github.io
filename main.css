@@ -35,6 +35,10 @@
         width: 100%;
     }
 
+    .carousel-inner > .item > a > .space_race_img {
+        width: 70%;
+    }
+
     .carousel-caption {
       background-color: lightgrey;
       border: 2px solid black;
