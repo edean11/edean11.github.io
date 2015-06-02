@@ -86,6 +86,9 @@
 
     h4 {
       font-weight: bold;
+      font-size: 2em;
+      text-decoration: underline;
+      margin-bottom: 20px;
     }
 
     li {
@@ -99,16 +102,49 @@
 
   .icon-links {
     padding: 70px 0;
+    text-align: center;
   }
 
   .icon-links a {
     color: darkgrey;
-    margin: 40px;
+    margin: 30px;
   }
 
   .icon-links > a:hover {
     color: black;
   }
+
+
+/*/////////////*/
+/*Media Queries*/
+/*/////////////*/
+
+@media (max-width: 767px) {
+  .about-container .about-row .background-list,
+  .about-container .about-row .skills-list,
+  .about-container .about-row .interests-list{
+    padding-left: 0;
+  }
+  .about-container .about-row .background-list li,
+  .about-container .about-row .skills-list li,
+  .about-container .about-row .interests-list li{
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-inner > .item > a > img {
+      height: 365px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .icon-links > a:first-child{
+    margin-left: 11px;
+  }
+}
+
 
 
 
