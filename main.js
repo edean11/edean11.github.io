@@ -130,12 +130,6 @@ var htmlElems = {
         location: [-6,0,0],
         rotation: [0,1.6,0]
     }
-    // skylight: {
-    //     name: 'skylight',
-    //     popup: skyLightPopup('https://s3.amazonaws.com/3datajs.com/images/abstract.png'),
-    //     location: [0,10,0],
-    //     rotation: [0,-3.15,0]
-    // }
 }
 
 //Create Options Obj from list of 3DATAjs available properties
@@ -194,7 +188,8 @@ var oneSectionLeftKey = [3,0,1,2];
 var twoSectionsLeftKey = [2,3,0,1];
 var threeSectionsLeftKey = [1,2,3,0];
 function tweenCameraRight(target_location){
-    createjs.Tween.get(camera.position).to({
+    createjs.Tween.get(camera.position).call(toggleArrowView).call(removeHeaderView)
+    .to({
         x: target_location.step.x,
         y: target_location.step.y,
         z: target_location.step.z},1500)
@@ -212,10 +207,13 @@ function tweenCameraRight(target_location){
         x: target_location.target.x,
         y: target_location.target.y,
         z: target_location.target.z}, 1500)
+    .call(toggleArrowView)
+    .call(addHeaderView)
 }
 
 function tweenCameraLeft(target_location){
-    createjs.Tween.get(camera.position).to({
+    createjs.Tween.get(camera.position).call(toggleArrowView).call(removeHeaderView)
+    .to({
         x: target_location.pos.x,
         y: target_location.pos.y+2,
         z: target_location.pos.z},750)
@@ -239,6 +237,8 @@ function tweenCameraLeft(target_location){
         x: target_location.pos.x,
         y: target_location.pos.y,
         z: target_location.pos.z},750)
+    .call(toggleArrowView)
+    .call(addHeaderView)
 
     createjs.Tween.get(controls.target).to({
         x: target_location.target.x,
@@ -272,7 +272,8 @@ var cameraApex = 900;
 
 function tweenCameraUp(target_location){
     //tween camera position
-    createjs.Tween.get(camera.position).to({
+    createjs.Tween.get(camera.position).call(toggleArrowView).call(removeHeaderView)
+    .to({
         x: 0,
         y: 0,
         z: 0},750)
@@ -291,6 +292,7 @@ function tweenCameraUp(target_location){
         x: target_location.pos.x,
         y: target_location.pos.y,
         z: target_location.pos.z},750)
+    .call(toggleArrowView).call(addHeaderView)
 
     //tween camera target
     createjs.Tween.get(controls.target).to({
@@ -333,7 +335,7 @@ function tweenCameraUp(target_location){
     spin.to({
         x: 0,
         y: 1,
-        z: 0},750)
+        z: 0},750, toggleArrowView())
 }
 
 //Nav Switches
@@ -361,6 +363,20 @@ function flipArrowIconColor(){
         $('.nav-icon-right').removeClass('nav-icon-right-black').addClass('nav-icon-right-white')
         $('.nav-icon-up').removeClass('nav-icon-up-black').addClass('nav-icon-up-white')
     }
+}
+
+function toggleArrowView(){
+    $('.nav-icon-left').toggleClass('hidden');
+    $('.nav-icon-right').toggleClass('hidden');
+    $('.nav-icon-up').toggleClass('hidden');
+}
+
+function removeHeaderView(){
+    $('.projectsHeader, .infoHeader, .linksHeader').css('display','none');
+}
+
+function addHeaderView(){
+    $('.projectsHeader, .infoHeader, .linksHeader').css('display','block');
 }
 
 function toggleProjectView(project){
@@ -420,6 +436,7 @@ $('.nav-icon-left').click(function(){
 });
 
 $('.nav-icon-up').click(function(){
+    toggleArrowView();
     locationIndex = twoSectionsLeftKey[locationIndex];
     tweenCameraUp(locations[locationIndex]);
     hideOtherIcons(locations[locationIndex].name);
@@ -427,9 +444,9 @@ $('.nav-icon-up').click(function(){
 
 //Project Click Events
 
-var threedatajsScale = 'scale(1.1,1.8)';
-var terminalColorCaptureScale = 'scale(1.5,2)'
-var spaceRaceScale = 'scale(2,1.8)'
+var threedatajsScale = 'scale(1.1,1.6)';
+var terminalColorCaptureScale = 'scale(1.5,1.8)'
+var spaceRaceScale = 'scale(1.8)'
 
 $('.closeProjectDescription').click(function(){
     $('body:hover .threedatajsContainer').css('transform','');
@@ -444,21 +461,25 @@ $('.closeProjectDescription').click(function(){
     $('.projectDescriptionsContainer').removeClass('hidden');
     $('.nav-icon-projects').css('display','block');
     $('.projectDescriptionsContainer').toggleClass('hidden');
+    toggleArrowView();
 })
 
 $('.threedatajsContainer').click(function(){
     $('body:hover .threedatajsContainer').css('transform',''+threedatajsScale+' translateY(200px) translateX(60px)');
     toggleProjectView('threedatajs');
+    toggleArrowView();
 })
 
 $('.terminalColorCaptureContainer').click(function(){
     $('body:hover .terminalColorCaptureContainer').css('transform',''+terminalColorCaptureScale+' translateY(200px) translateX(-660px)');
     toggleProjectView('terminalColorCapture');
+    toggleArrowView();
 })
 
 $('.spaceRaceContainer').click(function(){
     $('body:hover .spaceRaceContainer').css('transform',''+spaceRaceScale+' translateY(-180px) translateX(-220px)');
     toggleProjectView('spaceRace');
+    toggleArrowView();
 })
 
 // Info Events
@@ -514,6 +535,7 @@ $('.closeInfoDescription').click(function(){
     resetInfoStyles('.backgroundContainer');
     resetInfoStyles('.skillsContainer');
     resetInfoStyles('.interestsContainer');
+    toggleArrowView()
 })
 
 $('.backgroundContainer').click(function(){
@@ -525,6 +547,7 @@ $('.backgroundContainer').click(function(){
     $('.backgroundContainer').css('background-color','white');
     $('.backgroundContainer').css('border','10px solid tomato');
     toggleInfoView('background');
+    toggleArrowView();
 })
 
 $('.skillsContainer').click(function(){
@@ -536,6 +559,7 @@ $('.skillsContainer').click(function(){
     $('.skillsContainer').css('background-color','white');
     $('.skillsContainer').css('border','10px solid tomato');
     toggleInfoView('skills');
+    toggleArrowView();
 })
 
 $('.interestsContainer').click(function(){
@@ -547,6 +571,7 @@ $('.interestsContainer').click(function(){
     $('.interestsContainer').css('background-color','white');
     $('.interestsContainer').css('border','10px solid tomato');
     toggleInfoView('interests');
+    toggleArrowView();
 })
 
 
