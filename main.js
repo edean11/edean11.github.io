@@ -182,6 +182,9 @@ var controls = _3DATA.getCamera()[1]
 controls.target.x = 0;
 controls.target.y = 0;
 controls.target.z = -6;
+controls.noPan = true;
+controls.noRotate = true;
+controls.noZoom = true;
 
 //Nav Tweens
 var oneSectionLeftKey = [3,0,1,2];
