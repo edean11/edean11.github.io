@@ -276,7 +276,7 @@ function tweenCameraUp(target_location){
     .to({
         x: 0,
         y: 0,
-        z: 0},750)
+        z: 0},1500)
     // .wait(300)
     .to({
         x: 0,
@@ -291,25 +291,25 @@ function tweenCameraUp(target_location){
     .to({
         x: target_location.pos.x,
         y: target_location.pos.y,
-        z: target_location.pos.z},750)
+        z: target_location.pos.z},1500)
     .call(toggleArrowView).call(addHeaderView)
 
     //tween camera target
     createjs.Tween.get(controls.target).to({
         x: 0,
         y: cameraApex,
-        z: 0},750)
+        z: 0},1500)
     .wait(3000)
     .to({
         x: target_location.target.x,
         y: target_location.target.y,
-        z: target_location.target.z},750)
+        z: target_location.target.z},1500)
 
 
     // tween camera up position for spin effect
 
     var spin = createjs.Tween.get(camera.up);
-    spin.wait(750)
+    spin.wait(1500)
     for(i=1;i<3;i++){
         spin.to({
             x: 0,
@@ -335,7 +335,7 @@ function tweenCameraUp(target_location){
     spin.to({
         x: 0,
         y: 1,
-        z: 0},750, toggleArrowView())
+        z: 0},1500, toggleArrowView())
 }
 
 //Nav Switches
