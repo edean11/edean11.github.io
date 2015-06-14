@@ -149,7 +149,7 @@ var options = {
     maxBound : 10000,
     backgroundType : 'image', //image or color
     backgroundImage : ['img/white.png','img/white.png',
-    'img/abstract2.jpg','img/grey.png','img/black.jpg','img/black.jpg'],
+    'img/abstract2.jpg','img/grey.png','img/black.jpeg','img/black.jpeg'],
     // ['left','right','top','bottom','back','front']
     // backgroundColor : [[1,1,1],[1,1,1],[0,0,0],'0xc1cdc1',[0,0,0],[0,0,0]],
     nodeRotationVar : 'rotation'

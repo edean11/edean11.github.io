@@ -178,9 +178,9 @@ body {
     border: 5px solid white;
     border-radius: 50px;
     width: 480px;
-    -moz-transform: translateX(250px);
-    -webkit-transform: translateX(250px);
-    transform: translateX(250px);
+    -moz-transform: translateX(250px) scale(0.5);
+    -webkit-transform: translateX(250px) scale(0.5);
+    transform: translateX(250px) scale(0.5);
   }
 
   .profilePic:hover {
@@ -199,23 +199,23 @@ body {
     padding: 40px;
     border-radius: 50px;
     background-color: black;
-    -moz-transform: translateX(-400px);
-    -webkit-transform: translateX(-400px);
-    transform: translateX(-400px);
+    -moz-transform: translateX(-400px) scale(0.5);
+    -webkit-transform: translateX(-400px) scale(0.5);
+    transform: translateX(-400px) scale(0.5);
   }
 
   /*Return to Position When Body Hover*/
 
   body:hover .profilePic {
-    -moz-transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+    -moz-transform: translateX(0px) scale(1);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
   }
 
   body:hover .profilePicCaptionContainer {
-    -moz-transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+    -moz-transform: translateX(0px) scale(1);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
   }
 
 
@@ -277,23 +277,23 @@ body {
   }
 
   .threedatajsContainer {
-    -moz-transform: translateY(400px) translateX(450px);
-    -webkit-transform: translateY(400px) translateX(450px);
-    transform: translateY(400px) translateX(450px);
+    -moz-transform: translateY(400px) translateX(450px) scale(0.5);
+    -webkit-transform: translateY(400px) translateX(450px) scale(0.5);
+    transform: translateY(400px) translateX(450px) scale(0.5);
   }
     .threedatajsContainer .threedatajs {
       width: 800px; }
 
   .terminalColorCaptureContainer {
-    -moz-transform: translateY(400px) translateX(-400px);
-    -webkit-transform: translateY(400px) translateX(-400px);
-    transform: translateY(400px) translateX(-400px);
+    -moz-transform: translateY(400px) translateX(-400px) scale(0.5);
+    -webkit-transform: translateY(400px) translateX(-400px) scale(0.5);
+    transform: translateY(400px) translateX(-400px) scale(0.5);
   }
 
   .spaceRaceContainer {
-    -moz-transform: translateY(-300px);
-    -webkit-transform: translateY(-300px);
-    transform: translateY(-300px);
+    -moz-transform: translateY(-300px) scale(0.5);
+    -webkit-transform: translateY(-300px) scale(0.5);
+    transform: translateY(-300px) scale(0.5);
   }
 
   body:hover .threedatajsContainer, body:hover .terminalColorCaptureContainer,
