@@ -1,0 +1,19 @@
+{
+  "name": "edean11.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/edean11/edean11.github.io",
+  "authors": [
+    "Ed Dean<edean1010@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "3datajs-bundle": "~0.1.5"
+  }
+}
